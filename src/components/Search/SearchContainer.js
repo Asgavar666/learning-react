@@ -7,10 +7,13 @@ import {
   createAction_changeSearchString,
 } from '../../redux/searchStringRedux';
 
+//import getCardsForColumn from '../../redux/cardRedux';
+
 const mapStateToProps = (state) => ({
   searchString: getSearchString(state),
   countVisible: countVisibleCards(state),
   countAll: countAllCards(state),
+  //CardsForColumn: getCardsForColumn(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
