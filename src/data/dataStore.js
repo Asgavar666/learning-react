@@ -10,6 +10,9 @@ export const settings = {
     defaultText: 'Search...',
     icon: 'search',
   },
+  header: {
+    icon: 'dog',
+  },
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
 };
@@ -140,6 +143,20 @@ const cards = [
     title: 'Skyrim',
   },
 ];
+
+export const faqContent = {
+  header: 'FAQ',
+  title: 'FAQ <sup> to read! <sup />',
+  image: 'https://cdn.imgbin.com/23/1/0/imgbin-outer-space-extraterrestrial-life-illustration-cartoon-creative-space-4DeRhG9UPvfXwr204XFF0jPev.jpg',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+};
+
+export const infoContent = {
+  header: 'Info',
+  title: 'Info <sup> to read! <sup />',
+  image: 'https://cdn.imgbin.com/22/15/24/imgbin-spacecraft-outer-space-imagination-child-open-book-painted-outer-space-PebjeZvrjGNEQ8D3suxU9vgax.jpg',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+};
 
 const initialStoreData = {
   app: {...pageContents},

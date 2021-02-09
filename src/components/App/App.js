@@ -1,31 +1,33 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import List from '../List/ListContainer';
+import Home from '../Home/HomeContainer';
+import Info from '../Info/Info';
+import {BrowserRouter, Route} from 'react-router-dom';
+import MainLayout from '../MainLayout/MainLayout';
+import FAQ from '../FAQ/FAQ';
+import {AnimatedSwitch} from 'react-router-transition';
 import styles from './App.scss';
-import Search from '../Search/SearchContainer';
+import List from '../List/ListContainer';
+import SearchResult from '../SearchResult/SearchResultContainer';
 
-class App extends React.Component {
-  static propTypes = {
-    title: PropTypes.node,
-    subtitle: PropTypes.node,
-    lists: PropTypes.array,
+const App = () => (
+  <BrowserRouter>
+    <MainLayout>
+      <AnimatedSwitch
+        atEnter={{ opacity: 0 }}
+        atLeave={{ opacity: 0 }}
+        atActive={{ opacity: 1 }}
+        className={styles.switchWrapper}
+      >
+        <Route exact path='/' component={Home} />
+        <Route exact path='/info' component={Info} />
+        <Route exact path='/FAQ' component={FAQ} />
+        <Route exact path="/list/:id" component={List} />
+        <Route exact path='/search/:searchLink' component={SearchResult} />
+      </AnimatedSwitch>
 
-  }
-  render() {
-    const {title, subtitle, lists} = this.props;
-    return (
-      <main className={styles.component}>
-        <h1 className={styles.title}>{title}</h1>
-        <h2 className={styles.subtitle}>{subtitle}</h2>
-        <div className={styles.Search}>
-          <Search></Search>
-        </div>
-        {lists.map(listData => (
-          <List key={listData.id} {...listData} />
-        ))}
-      </main>
-    );
-  }
-}
+    </MainLayout>
+    
+  </BrowserRouter>
+);
 
 export default App;
