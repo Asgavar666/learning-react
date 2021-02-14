@@ -5,7 +5,7 @@ import {infoContent} from '../../data/dataStore';
 
 const Info = () => (
   <Container>
-    <Hero titleText={infoContent.title} image={infoContent.imageAddress}/>  
+    <Hero titleText={infoContent.title} imageAddress={infoContent.imageAddress}/>  
     <h2>{infoContent.header}</h2>
     <p>{infoContent.description}</p>
   </Container>

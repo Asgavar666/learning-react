@@ -6,7 +6,7 @@ import grayscale from './FAQ.scss';
 
 const FAQ = () => (
   <Container>
-    <Hero titleText={faqContent.title} image={faqContent.imageAddress} className={grayscale} />
+    <Hero titleText={faqContent.title} imageAddress={faqContent.imageAddress} className={grayscale} />
     <h2>{faqContent.header}</h2>
     <p>{faqContent.description}</p>
   </Container>
